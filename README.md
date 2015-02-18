@@ -93,11 +93,11 @@ INSIGHT_EMAIL_CONFIRM_HOST # Only meanfull if ENABLE_EMAILSTORE is enable. Hostn
 
 ```
 
-Ubuntu environ variables
+Ubuntu environment variables setting
 
-  export BITCOIND_USER='username'
-  export BITCOIND_PASS='password'
-  export INSIGHT_NETWORK='livenet'
+    export BITCOIND_USER='username'
+    export BITCOIND_PASS='password'
+    export INSIGHT_NETWORK='livenet'
 
 Make sure that bitcoind is configured to [accept incoming connections using 'rpcallowip'](https://en.bitcoin.it/wiki/Running_Bitcoin).
 
