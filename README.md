@@ -40,6 +40,7 @@ bitcoind must be running and must have finished downloading the blockchain **bef
     $ git clone https://github.com/bitpay/insight-api && cd insight-api
 
   Install dependencies:
+  
     $ apt-get install python-software-properties
     
     $ apt-add-repository ppa:chris-lea/node.js
