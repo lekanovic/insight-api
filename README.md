@@ -98,6 +98,9 @@ Ubuntu environment variables setting
     export BITCOIND_USER='username'
     export BITCOIND_PASS='password'
     export INSIGHT_NETWORK='livenet'
+    # Testnet
+    export INSIGHT_NETWORK='testnet'
+    export BITCOIND_PORT=18332
 
 Make sure that bitcoind is configured to [accept incoming connections using 'rpcallowip'](https://en.bitcoin.it/wiki/Running_Bitcoin).
 
