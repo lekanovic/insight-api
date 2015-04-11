@@ -97,6 +97,7 @@ Ubuntu environment variables setting
 
     export BITCOIND_USER='username'
     export BITCOIND_PASS='password'
+    export INSIGHT_FORCE_RPC_SYNC=1
     export INSIGHT_NETWORK='livenet'
     # Testnet
     export INSIGHT_NETWORK='testnet'
