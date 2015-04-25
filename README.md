@@ -105,6 +105,14 @@ Ubuntu environment variables setting
 
 Make sure that bitcoind is configured to [accept incoming connections using 'rpcallowip'](https://en.bitcoin.it/wiki/Running_Bitcoin).
 
+RPC - issue
+    insight/node_modules/insight-bitcore-api/util/sync.js -D -v --rpc
+    .option('-D --destroy', 'Remove current DB (and start from there)', 0)
+    .option('-S --startfile', 'Number of file from bitcoind to start(default=0)')
+    .option('-R --rpc', 'Force sync with RPC')
+    .option('--start [hash]', 'StartAt block')
+    .option('--stop [hash]', 'StopAt block')
+    .option('-v --verbose', 'Verbose 0/1', 0)
 In case the network is changed (testnet to livenet or vice versa) levelDB database needs to be deleted. This can be performed running:
 ```util/sync.js -D``` and waiting for *insight* to synchronize again.  Once the database is deleted, the sync.js process can be safely interrupted (CTRL+C) and continued from the synchronization process embedded in main app.
 
