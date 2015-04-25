@@ -105,7 +105,7 @@ Ubuntu environment variables setting
 
 Make sure that bitcoind is configured to [accept incoming connections using 'rpcallowip'](https://en.bitcoin.it/wiki/Running_Bitcoin).
 
-RPC - issue
+## RPC - issue
     insight/node_modules/insight-bitcore-api/util/sync.js -D -v --rpc
     .option('-D --destroy', 'Remove current DB (and start from there)', 0)
     .option('-S --startfile', 'Number of file from bitcoind to start(default=0)')
