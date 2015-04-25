@@ -113,6 +113,7 @@ RPC - issue
     .option('--start [hash]', 'StartAt block')
     .option('--stop [hash]', 'StopAt block')
     .option('-v --verbose', 'Verbose 0/1', 0)
+
 In case the network is changed (testnet to livenet or vice versa) levelDB database needs to be deleted. This can be performed running:
 ```util/sync.js -D``` and waiting for *insight* to synchronize again.  Once the database is deleted, the sync.js process can be safely interrupted (CTRL+C) and continued from the synchronization process embedded in main app.
 
