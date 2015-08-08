@@ -54,7 +54,9 @@ bitcoind must be running and must have finished downloading the blockchain **bef
     $ apt-get update
     
     $ apt-get install nodejs
-    
+   
+    $ npm install nodemailer-smtp-transport
+  
     $ npm install
 
   Run the main application:
