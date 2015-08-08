@@ -53,6 +53,10 @@ module.exports = function(app) {
   app.get(apiPrefix + '/sync', st.sync);
   app.get(apiPrefix + '/peer', st.peer);
 
+  // Utils route
+  var utils = require('../app/controllers/utils');
+  app.get(apiPrefix + '/utils/estimatefee', utils.estimateFee);
+
   // Currency
   var currency = require('../app/controllers/currency');
   app.get(apiPrefix + '/currency', currency.index);
@@ -60,20 +64,8 @@ module.exports = function(app) {
   // Email store plugin
   if (config.enableEmailstore) {
     var emailPlugin = require('../plugins/emailstore');
-    app.post(apiPrefix + '/email/save', emailPlugin.save);
     app.get(apiPrefix + '/email/retrieve', emailPlugin.retrieve);
-    app.post(apiPrefix + '/email/change_passphrase', emailPlugin.changePassphrase);
-
-    app.post(apiPrefix + '/email/validate', emailPlugin.validate);
-    app.get(apiPrefix + '/email/validate', emailPlugin.validate);
-
-    app.post(apiPrefix + '/email/register', emailPlugin.oldSave);
     app.get(apiPrefix + '/email/retrieve/:email', emailPlugin.oldRetrieve);
-
-    app.post(apiPrefix + '/email/delete/profile', emailPlugin.eraseProfile);
-    app.get(apiPrefix + '/email/delete/item', emailPlugin.erase);
-
-    app.get(apiPrefix + '/email/resend_email', emailPlugin.resendEmail);
   }
 
   // Currency rates plugin

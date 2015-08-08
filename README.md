@@ -91,9 +91,6 @@ INSIGHT_PORT          # insight api port
 INSIGHT_DB            # Path where to store insight's internal DB. (defaults to $HOME/.insight)
 INSIGHT_SAFE_CONFIRMATIONS=6  # Nr. of confirmation needed to start caching transaction information
 INSIGHT_IGNORE_CACHE  # True to ignore cache of spents in transaction, with more than INSIGHT_SAFE_CONFIRMATIONS confirmations. This is useful for tracking double spents for old transactions.
-ENABLE_MAILBOX # if "true" will enable mailbox plugin
-ENABLE_CLEANER # if "true" will enable message db cleaner plugin
-ENABLE_MONITOR # if "true" will enable message db monitor plugin
 ENABLE_CURRENCYRATES # if "true" will enable a plugin to obtain historic conversion rates for various currencies
 ENABLE_RATELIMITER # if "true" will enable the ratelimiter plugin
 LOGGER_LEVEL # defaults to 'info', can be 'debug','verbose','error', etc.
@@ -213,6 +210,18 @@ The end-points are:
   /api/block/[:hash]
   /api/block/00000000a967199a2fad0877433c93df785a8d8ce062e5f9b451cd1397bdbf62
 ```
+### Block index
+Get block hash by height
+```
+  /api/block-index/[:height]
+  /api/block-index/0
+```
+This would return:
+```
+{"blockHash":"000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f"}
+```
+which is the hash of the Genesis block (0 height)
+
 ### Transaction
 ```
   /api/tx/[:txid]
@@ -392,6 +401,13 @@ Where "xxx" can be:
  * getTxOutSetInfo
  * getBestBlockHash
  * getLastBlockHash
+
+
+### Utility methods
+```
+  /api/utils/estimatefee[?nbBlocks=2]
+```
+
 
 ## Web Socket API
 The web socket API is served using [socket.io](http://socket.io).
