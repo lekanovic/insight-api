@@ -45,7 +45,7 @@ bitcoind must be running and must have finished downloading the blockchain **bef
 
     $ git clone https://github.com/bitpay/insight-api && cd insight-api
 
-  Install dependencies:
+  Install dependencies Ubuntu12.04:
   
     $ apt-get install python-software-properties
     
@@ -60,6 +60,24 @@ bitcoind must be running and must have finished downloading the blockchain **bef
     $ npm install morgan
   
     $ npm install
+  
+  Install dependencies Wheezy 7.3:
+  
+    apt-get install python g++ wget libssl-dev
+    
+    mkdir /tmp/nodejs && cd /tmp/nodejs
+    
+    wget http://nodejs.org/dist/node-latest.tar.gz
+    
+    tar xzvf node-latest.tar.gz && cd node-v*
+    
+    ./configure
+    
+    make
+    
+    make test
+    
+    make install
 
   Run the main application:
 
