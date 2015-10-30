@@ -116,6 +116,13 @@ Ubuntu environment variables setting
     export INSIGHT_NETWORK='testnet'
     export BITCOIND_PORT=18332
 
+Regtest
+```
+For regtest we must pick this two commits
+https://github.com/slickage/insight-api/commit/b34cbdb2eb0e7f084f7fa1d43260e430a02d866f
+https://github.com/slickage/bitcore/commit/d6c89761ca167bec91e490cd9b32438bb87e032e
+```
+
 Make sure that bitcoind is configured to [accept incoming connections using 'rpcallowip'](https://en.bitcoin.it/wiki/Running_Bitcoin).
 
 ## RPC - issue
