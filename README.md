@@ -112,7 +112,7 @@ Ubuntu environment variables setting
     export BITCOIND_PASS='password'
     export INSIGHT_FORCE_RPC_SYNC=1
     export INSIGHT_NETWORK='livenet'
-    # Testnet
+    # Testnet & Regtest
     export INSIGHT_NETWORK='testnet'
     export BITCOIND_PORT=18332
 
